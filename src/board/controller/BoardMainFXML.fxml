@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="board.controller.BoardMainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="153.0" layoutY="14.0" prefHeight="28.0" prefWidth="294.0" text="게시판 관리 시스템" textFill="#8d1616">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Pagination fx:id="pagination" layoutY="104.0" prefHeight="374.0" prefWidth="600.0" />
+      <Button layoutX="25.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#register" text="게시글 작성" />
+      <Button fx:id="upda" layoutX="127.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#update" text="게시글 수정" />
+      <Button fx:id="dele" layoutX="233.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#delete" text="게시글 삭제" />
+      <TextField fx:id="tex" layoutX="415.0" layoutY="66.0" />
+      <Label layoutX="337.0" layoutY="70.0" text="게시글 검색 :" />
+      <Button layoutX="552.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#select" text="검색" />
+      <TableView fx:id="table" layoutY="104.0" prefHeight="327.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="no" prefWidth="55.0" text="번호" />
+          <TableColumn fx:id="title" prefWidth="122.0" text="제목" />
+            <TableColumn fx:id="writer" prefWidth="70.0" text="작성자" />
+            <TableColumn fx:id="date" prefWidth="122.0" text="작성날짜" />
+            <TableColumn fx:id="content" prefWidth="230.0" text="내용" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
